@@ -36,29 +36,67 @@ Após isso a imagem estará instalada e rodando pronta para uso.
 ### mensagem de boas vindas para a rota raiz
 ###### http://localhost:3344/
 
-### criando novos survivors (Sobreviventes)
+## No insomnia crie as requests (CRUD)
 
- {
-	"name": "Losangelo Pacífico",
-  "age": 45,
-	"gender": "M",
-	"latitude": -5.104149,
-	"longitude": -42.784170,
-	"infections": 0,
-	"infected": false,
-	"water": 0,
-	"ammunitoin": 0,
-	"medication": 0,
-	"food":0
- }
+#### Crie uma request, pode chama-la de **CreateSurvivors**
+method POST com o body em Json
 
-## rota store
-###### http://localhost:3344/survivor
+###### create new survivors e yours itens (water...)
+rota: /survivor
 
-## Todos os cadastrados
+corpo body:
 
-### rota get
-###### http://localhost:3344/survivors
+{
+    "name": "Losangelo Pacífico",
+    "age": 45,
+    "gender": "M",
+    "latitude": "-34.10414900000",
+    "longitude": "-42.72417000000",
+    "infections": 0,
+    "infected": false,
+    "water": 1,
+    "ammunition": 3,
+    "medication": 3,
+    "food": 5,
+    "infection_attested_for": null
+}
+
+#### Crie uma request, pode chama-la de **ListSurvivors**
+method GET  sem corpo body 
+
+###### list all survivor no infecteds
+rota: /survivors
+
+sem corpo body
+###### retorna uma lista em json
+
+#### Crie uma request, pode chama-la de **UpdateLongLatSurvivors**
+method PUT com corpo body 
+
+rota: /survivor/:id
+
+com corpo body
+{
+	"latitude": -18.104149, 
+	"longitude": -301.784170
+}
+
+ 
+#### declared e update survivor infected, crie uma request, pode chama-la de **ReportingInfecteds**
+method PUT com corpo body 
+
+rota: /survivor/:id/reportinfected/:infectedId
+
+ex: http://localhost:3344/survivor/4/reportinfected/2
+com corpo body
+
+{	
+	"infected": true	
+}
+
+-----
+Uma particularidade no item onde um survivor marcado tres vezes por outros. como infected, para essa feature, foi estruturado de forma em que é preciso tres survivors distintos para poder marcar outro survivor como infected.
+Sendo assim o mesmo survivor não poderá marcar outro survivor mais de uma vez.
 
 
 ---
