@@ -1,5 +1,7 @@
 # Desafio proposto aos **Candidatos à vaga de Desenvolvedor Backend Editora CEV.**
-##### set/2019
+##### set/2019 
+
+detalhamento do desafio: https://github.com/smartercode/backend-test
 
 Para o esse projeto, usei o **DOCKER** e ele deve estar intalado ou gerar um database no postgres físico.
 
