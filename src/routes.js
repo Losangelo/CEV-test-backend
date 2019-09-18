@@ -31,13 +31,4 @@ routes.put(
 //Reports
 routes.get("/survivor/reports/", ReportingInfectionController.index);
 
-/*
-  //route to return the percentage of infected survivors
-  routes.get("/survivors/reports/infected", SurvivorController.infected);
-  //route to return the percentage of non infected survivors
-  routes.get("/survivors/reports/noninfected", SurvivorController.nonInfected);
-  //route to return the average amount of resources per survivor
-  routes.get("/survivors/reports/averageamount", SurvivorController.average);
-*/
-
 export default routes;
