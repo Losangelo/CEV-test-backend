@@ -1,4 +1,5 @@
 # Desafio proposto aos **Candidatos à vaga de Desenvolvedor Backend Editora CEV.**
+### As mensagens de retorno do sistema estam em inglês, por formalidades de padronização.
 ##### set/2019 
 
 detalhamento do desafio: https://github.com/smartercode/backend-test
